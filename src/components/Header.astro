@@ -3,14 +3,103 @@ import ArrowTopRight from "@/icons/ArrowTopRight.astro"
 import Menu from "@/icons/Menu.astro"
 ---
 
-<header class="flex items-center pt-8 w-full mx-auto px-4 md:px-0">
-    <img src="/logo.svg" alt="" class="w-10 h-10">
-    <div class="md:flex justify-between md:bg-zinc-100 px-12 py-4 rounded-[40px] ml-4 w-full">
-        <nav class="hidden md:flex flex-row gap-x-16 justify-center">
-            <a href="/">Inicio</a>
-            <a href="#services-cards">Servicios</a>
-            <a href="/">Sobre Nosotros</a>
-        </nav>
-        <a href="#contact-form" class="hidden md:block text-main font-bold text-[16px]">Contáctanos<ArrowTopRight class="w-4 h-4 inline-block" /></a>
+<header class="pt-8 px-4 md:px-4 lg:px-0">
+    <a href="#" class="logo hidden lg:block md:h-8 md:w-8 h-12 w-12"><img src="/logo.svg" alt="Iquitos Tech Logo"></a>
+
+    <div class="flex justify-between w-full">
+        <ul class="navbar">
+            <li><a href="" class="">Inicio</a></li>
+            <li><a href="#services-cards" class="">Servicios</a></li>
+            <li><a href="" class="">Sobre Nosotros</a></li>
+        </ul>
+    
+        <div class="contact">
+            <a href="#contact-form" class="hidden lg:block">Contáctanos<ArrowTopRight class="h-4 w-4 inline-block"/></a>
+            <a href="/" class="logo block lg:hidden md:h-8 md:w-8 h-12 w-12"><img src="/logo.svg" alt="Iquitos Tech Logo"></a>
+            <div id="menu-icon" class=""><Menu class="h-12 w-12" /></div>
+        </div>
     </div>
 </header>
+
+<script>
+    let menu = document.querySelector('#menu-icon') as HTMLElement || null;
+    let navbar = document.querySelector('.navbar');
+
+    menu.onclick = () => {
+        navbar?.classList.toggle('open');
+    }
+</script>
+    
+
+<style>
+    header {
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all .50s ease;
+    }
+
+    .navbar {
+        display: flex;
+        align-content: start;
+    }
+
+    .navbar a{
+        padding: 5px 0;
+        margin: 0 30px;
+        transition: all .50s ease;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+    }
+
+    #menu-icon {
+        cursor: pointer;
+        z-index: 1001;
+        display: none;
+    }
+
+    @media (max-width: 1090px) {
+        #menu-icon {
+            display: block;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 75px;
+            background-color: rgb(26, 71, 196);
+            right: 20px;
+            width: 200px;
+            height: 150px;
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-radius: 10px;
+            transition: all .5s ease;
+        }
+
+        .navbar a {
+            display: block;
+            margin: 12px 0;
+            padding: 0px 25px;
+            transition: all .5s ease;
+            color: white;
+            font-weight: bold;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .navbar.open {
+            right: 20px;
+            display: flex;
+        }
+    }
+</style>
