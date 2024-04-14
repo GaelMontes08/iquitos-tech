@@ -6,15 +6,15 @@ import Menu from "@/icons/Menu.astro"
 <header class="pt-8 px-4 md:px-4 lg:px-0">
     <a href="#" class="logo hidden lg:block md:h-8 md:w-8 h-12 w-12"><img src="/logo.svg" alt="Iquitos Tech Logo"></a>
 
-    <div class="flex justify-between w-full">
-        <ul class="navbar">
+    <div class="flex justify-between w-full h-16 lg:bg-[#eff0f0] rounded-[40px] lg:pr-6 lg:ml-2 items-center">
+        <ul class="navbar font-medium ml-4">
             <li><a href="" class="">Inicio</a></li>
             <li><a href="#services-cards" class="">Servicios</a></li>
             <li><a href="" class="">Sobre Nosotros</a></li>
         </ul>
     
         <div class="contact">
-            <a href="#contact-form" class="hidden lg:block">Contáctanos<ArrowTopRight class="h-4 w-4 inline-block"/></a>
+            <a href="#contact-form" class="contact-btn hidden lg:block font-bold"><span class="Button__inner">Contáctanos<ArrowTopRight class="h-4 w-4 inline-block"/></span></a>
             <a href="/" class="logo block lg:hidden md:h-8 md:w-8 h-12 w-12"><img src="/logo.svg" alt="Iquitos Tech Logo"></a>
             <div id="menu-icon" class=""><Menu class="h-12 w-12" /></div>
         </div>
@@ -63,6 +63,99 @@ import Menu from "@/icons/Menu.astro"
         display: none;
     }
 
+
+    @media (min-width: 1091px) {
+
+        li a {
+            position: relative;
+        }
+
+        li a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: rgb(26, 71, 216);
+            bottom: -2px;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s ease-in-out;
+        }
+
+        li a:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .contact-btn {
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-thickness: 0.05em;
+            text-underline-offset: 0.25em;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+            color: #444638;
+            font-size: 16px;
+            border-radius: 80em;
+            background-color: rgb(26, 71, 216);
+            border: 0.125rem solid rgb(26, 71, 216);
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s ease, border-color 0.2s ease,
+                color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+            cursor: pointer;
+            overflow: hidden;
+            will-change: transform;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            background-color: white;
+            border-color: white;
+            transition: background-color 0.2s ease, border-color 0.2s ease,
+                color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+            transform: scale(1.07);
+            will-change: transform;
+            color: rgb(26, 71, 216);
+        }
+
+        .contact-btn:after {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(-100%) rotate(10deg);
+            transform-origin: top left;
+            transition: background-color 0.2s ease, border-color 0.2s ease,
+                color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+            will-change: transform;
+            z-index: -1;
+            border-radius: 80em;
+            background-color: white;
+        }
+
+        .contact-btn:hover:after {
+            transform: translate(0);
+            z-index: 0;
+        }
+        .contact-btn > * {
+            position: relative;
+            z-index: 1;
+        }
+        .Button__inner {
+            color: white;
+        }
+        .contact-btn:hover .Button__inner {
+            color: rgb(26, 71, 216);
+        }
+    }
+
     @media (max-width: 1090px) {
         #menu-icon {
             display: block;
@@ -70,7 +163,7 @@ import Menu from "@/icons/Menu.astro"
 
         .navbar {
             position: absolute;
-            top: 75px;
+            top: 80px;
             background-color: rgb(26, 71, 196);
             right: 20px;
             width: 200px;
