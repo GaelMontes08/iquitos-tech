@@ -1,0 +1,88 @@
+---
+import Facebook from "@/icons/Facebook.astro";
+import Instagram from "@/icons/Instagram.astro";
+import Whatsapp from "@/icons/Whatsapp.astro";
+import ImagesCard from "./ImagesCard.astro";
+---
+
+<section class="w-full mx-auto pt-10 grid grid-cols-1 lg:grid-cols-2 gap-28 mb-16">
+    <div class="lg:pt-28">
+        <h1 class="text-7xl font-bold flex flex-row pb-5 text-center lg:text-start lg:justify-start justify-center">Iquitos Tech</h1>
+        <p class="text-center lg:text-start">
+            <span class="text-xl opacity-80">Somos tu solución <span class="text-main font-bold">confiable</span> y rápida para todos tus <span class=" font-bold">problemas tecnológicos.</span></span>
+        </p>
+        <ul class="md:flex grid lg:gap-x-1 gap-y-2 my-6 justify-center lg:justify-start">
+            <li class="">
+                <a href="https://www.facebook.com/profile.php?id=61557903596714" class="btn-link py-2 px-2 hover:scale-110" target="_blank" rel="noopener noreferrer">
+                    <Facebook class="w-6 h-6 inline-block" />
+                    Facebook</a>
+            </li>
+            <li class="">
+                <a href="https://www.instagram.com/iquitostech/" class="btn-link py-2 px-2 hover:scale-110" target="_blank" rel="noopener noreferrer">
+                    <Instagram class="w-6 h-6 inline-block" />
+                    Instagram</a>
+            </li>
+            <li class="">
+                <a href="https://wa.me/917811803" class="btn-link py-2 px-2 hover:scale-110 items-center" target="_blank" rel="noopener noreferrer">
+                    <Whatsapp class="w-6 h-6 inline-block py-auto" />
+                   <span>Whatsapp</span></a>
+            </li>
+        </ul>
+    </div>
+    <ImagesCard/>
+</section>
+
+<style>
+    li {
+        border-radius:     0;
+        margin:    0; 
+        font-family:    inherit; 
+        font-size:    inherit; 
+        line-height:    inherit;
+        overflow:   visible;
+        text-transform:  none;
+        -webkit-appearance: button;
+    }
+
+    .btn-link {
+        display:  inline-block; 
+        font-weight:  bold; 
+        color:  rgb(26, 71, 216); 
+        -webkit-user-select:  none; 
+        -moz-user-select:  none; 
+        -ms-user-select:  none; 
+        user-select:  none; 
+        border:  0; 
+        border-radius:  4rem; 
+        transition:  all .2s ease-out;  
+        white-space: nowrap;  
+        margin-bottom: 1rem;  
+        box-shadow: 2px 1px 2px rgba(180,180,180,.7),inset 3px 2px 5px rgba(255,255,255,1);
+    }
+
+    li a:not(:disabled) { 
+        cursor: pointer;
+    } 
+
+    .btn-link:hover { 
+        color:  white; 
+        background-color: rgb(26, 71, 196); 
+        box-shadow: -2px -1px 2px rgba(180,180,180,.3),inset -3px -2px 3px rgb(26, 71, 196);
+    }
+
+    .btn-link:not(:disabled):not(.disabled) { 
+        cursor: pointer;
+    } 
+
+    .btn-link {
+        margin:  0px 2px 0 0; 
+        z-index:  1499;
+        left: 1rem; 
+    }
+
+    .btn-link:hover,.btn-link:active  { 
+        color: white; 
+        background-color: rgb(26, 71, 196); 
+        box-shadow: -2px -1px 2px rgba(180,180,180,.3),inset -3px -2px 3px rgb(26, 71, 196);
+    } 
+</style>

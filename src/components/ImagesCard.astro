@@ -1,23 +1,23 @@
-<div class="parent md:w-[500px] w-[400px] h-[400px] mx-auto">
+<div class="parent mx-auto">
     <div class="img1">
         <span class="my-5 mx-5 py-3 px-3 absolute text-white font-semibold text-[18px]">Reparación de laptops y computadoras</span>
-        <img src="img/laptop-repair.webp" alt="laptop-repair" class="h-[300px] w-[500px] rounded-[40px]">
+        <img src="img/laptop-repair.webp" alt="laptop-repair" class="rounded-[40px] w-full h-[250px] object-cover">
     </div>
     <div class="img2">
         <span class="mt-44 mx-5 py-3 px-3 absolute text-white font-semibold text-[18px]">Armamos PC's</span>
-        <img src="img/pc-montaje.webp" alt="pc-montaje" class="h-[250px] rounded-[40px]">
+        <img src="img/pc-montaje.webp" alt="pc-montaje" class="rounded-[40px] w-full h-[250px] object-cover">
     </div>
     <div class="img3">
         <span class="mt-44 mx-1 py-3 px-3 absolute text-white font-semibold text-[18px]">Reparación de impresoras</span>
-        <img src="img/phone-repair.webp" alt="phone-repair" class="h-[250px] rounded-[40px]">
+        <img src="img/Mantenimiento-impresoras.avif" alt="phone-repair" class="rounded-[40px] w-full h-[250px] object-cover">
     </div>
 </div> 
 
 <style>
     .parent {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 200px 250px;
+        grid-template-columns: repeat(2, 265.5px);
+        grid-template-rows: repeat(2, 250px);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
     }
@@ -25,19 +25,16 @@
     .img1 { 
         grid-area: 1 / 1 / 2 / 3;
         border-radius: 25px;
-        box-shadow: 0 8px 32px 0 rgba(7, 8, 12, 0.27);
     }
     
     .img2 {
         grid-area: 2 / 1 / 3 / 2;
         border-radius: 30px;
-        box-shadow: 0 8px 32px 0 rgba(7, 8, 12, 0.27);
     }
 
     .img3 { 
         grid-area: 2 / 2 / 3 / 3; 
         border-radius: 30px;
-        box-shadow: 0 8px 32px 0 rgba(7, 8, 12, 0.27);
     }
 
     span {
@@ -48,7 +45,7 @@
         border: 1px solid rgba(255, 255, 255, 0.18);
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 1090px) {
         .parent {
             display: none;
         }
