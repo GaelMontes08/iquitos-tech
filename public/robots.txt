@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://iquitostech.net
+
+# Sitemaps
+Sitemap: https://iquitostech.net/sitemap-index.xml

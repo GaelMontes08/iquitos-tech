@@ -1,0 +1,20 @@
+---
+/** https://developers.google.com/search/docs/appearance/structured-data/organization */
+const organizationSchema = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"url": "https://iquitostech.net",
+	"image": "/img/og.webp",
+	"sameAs": [
+		"https://www.instagram.com/iquitostech",
+		"https://twitter.com/IquitosTech"
+	],
+	"logo": "img/og.webp",
+	"name": "Iquitos Tech",
+	"alternateName": "Iquitos Tech",
+	"description":
+		"En Iquitos Tech entendemos lo crucial que es mantener tus dispositivos tecnológicos en óptimas condiciones. Estamos aquí para ayudarte.",
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
