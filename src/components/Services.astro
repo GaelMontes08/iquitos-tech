@@ -1,35 +1,42 @@
+---
+import ArrowTopRight from "@/icons/ArrowTopRight.astro";
+---
+
 <h2 class="text-4xl flex justify-center font-bold text-main" id="services-cards">Nuestros Servicios</h2>
-<div class=" mt-10 lg:grid lg:grid-cols-2 lg:gap-[10px]">
+<div class=" mt-10 lg:grid lg:grid-cols-2 lg:gap-x-[10px]">
     <div class="my-2">
-        <div class="flex place-content-start w-[550px] md:w-[650px] mx-auto">
-            <h4 class="md:text-2xl pl-10 font-semibold absolute pt-[25px] w-[240px] md:w-[400px] break-words text-xl">Reparación de computadoras y laptops</h4>
-            <span class="pl-10 absolute md:text-[20px] opacity-80 font-light pt-28 md:pt-24 break-words md:w-[320px] w-[240px] text-[17px]">Ya sea un problema de hardware o software, podemos reparar tu dispositivo y dejarlo como nuevo.</span>
+        <div class="flex md:w-[650px] mx-auto">
+            <h4 class="md:text-2xl pl-10 md:pl-2 lg:pl-8 font-semibold absolute w-[240px] md:w-[400px] break-words text-xl">Reparación de computadoras</h4>
+            <span class="hidden md:block pl-10 md:pl-2 lg:pl-8 absolute md:text-[20px] opacity-80 font-light md:pt-16 break-words lg:w-[320px] md:w-[300px] text-[17px]">Ya sea un problema de hardware o software, podemos reparar tu dispositivo y dejarlo como nuevo.</span>
+            <span class="contact-btn md:hidden absolute mt-20 ml-10">Saber más <ArrowTopRight class="h-5 w-5 inline-block" /></span>
         </div>
-        <img src="/img/reparacion-pc-laptops.webp" class=" z-[-1] rounded-[50px] w-[400px] md:w-[650px] mx-auto h-[274.613px] object-cover"/>
+        <img src="/img/reparacion-pc-laptops.webp" class="w-[90%] lg:w-[650px] mx-auto"/>
     </div>
     <div class="my-2">
-        <div class="flex place-content-start w-[550px] md:w-[550px] mx-auto">
-            <h4 class="md:text-2xl pl-10 font-semibold absolute pt-[25px] w-[300px] break-words text-xl">Desarrollo Web con WordPress</h4>
-            <span class="pl-10 absolute md:text-[20px] opacity-80 font-light pt-24 break-words md:w-[320px] w-[220px] text-[17px]">Creamos páginas web a medida que reflejen la identidad de tu marca y te ayuden a alcanzar tus objetivos en línea.</span>
+        <div class="flex lg:w-[550px] md:w-[650px] mx-auto">
+            <h4 class="md:text-2xl font-semibold pl-10 md:pl-2 absolute md:w-[300px] w-52 break-words text-xl">Desarrollo Web con WordPress</h4>
+            <span class="hidden md:block pl-10 md:pl-2 absolute md:text-[20px] opacity-80 font-light pt-24 break-words lg:w-[300px] md:w-[400px] text-[17px]">Creamos páginas web a medida que reflejen la identidad de tu marca y te ayuden a alcanzar tus objetivos.</span>
+            <span class="contact-btn md:hidden absolute mt-20 ml-10">Saber más <ArrowTopRight class="h-5 w-5 inline-block" /></span>
         </div>
-        <img src="/img/desarrollo-web.webp" class=" z-[-1] rounded-[50px] w-[550px] md:w-[600px] mx-auto h-[274.613px]"/>
+        <img src="/img/desarrollo-web.webp" class="w-[90%] lg:w-[600px] mx-auto"/>
     </div>
 </div>
-<div class="mt-[10px] lg:grid lg:grid-cols-2 lg:gap-[10px]">
+<div class=" lg:grid lg:grid-cols-2 lg:gap-[10px]">
     <div class="my-2">
-        <div class="flex place-content-start w-[550px] md:w-[650px] mx-auto">
-            <h4 class="md:text-2xl pl-10 font-semibold absolute pt-[25px] w-[240px] break-words text-xl">Armado de PC a Medida</h4>
-            <span class="pl-10 absolute md:text-[20px] opacity-80 font-light pt-[85px] break-words md:w-[320px] w-[240px] text-[17px]">Desde PCs para juegos hasta estaciones de trabajo profesionales.</span>
-            <span class="ml-10 mt-[200px] absolute rounded-lg border-gray-300 bg-black text-white px-4 py-1">Próximamente</span>
+        <div class="flex lg:w-[550px] md:w-[650px] mx-auto">
+            <h4 class="md:text-2xl pl-10 md:pl-2 lg:pl-4 font-semibold absolute w-[240px] md:w-[300px] lg:w-[240px] break-words text-xl">Armado de PC a Medida</h4>
+            <span class="hidden md:block pl-10 md:pl-2 lg:pl-4 absolute md:text-[20px] opacity-80 font-light pt-16 lg:pt-[95px] break-words lg:w-[320px] w-[350px] text-[17px]">Desde PCs para juegos hasta estaciones de trabajo profesionales.</span>
+            <span class="ml-10 md:ml-2 lg:ml-4 mt-[85px] md:mt-[140px] lg:mt-[200px] absolute rounded-lg border-gray-300 bg-black text-white px-4 py-1">Próximamente</span>
         </div>
-        <img src="/img/armados-de-pc.webp" class="z-[-1] rounded-[50px] w-[550px] md:w-[650px] mx-auto h-[274.613px]"/>
+        <img src="/img/armados-de-pc.webp" class="w-[90%] lg:w-[650px] mx-auto"/>
     </div>
     <div class="my-2">
-        <div class="flex place-content-start w-[550px] md:w-[550px] mx-auto">
-            <h4 class="md:text-2xl pl-10 font-semibold absolute pt-[25px] md:w-[300px] w-[180px] break-words text-xl">Reparación de celulares y tablets</h4>
-            <span class="pl-10 absolute md:text-[20px] opacity-80 font-light pt-[120px] md:pt-24 break-words md:w-[240px] w-[200px] text-[17px]">No importa la marca o el modelo, podemos reparar una amplia variedad de dispositivos.</span>
+        <div class="flex lg:w-[550px] md:w-[650px] mx-auto">
+            <h4 class="md:text-2xl pl-10 md:pl-2 font-semibold absolute w-[180px] md:w-[400px] lg:w-[300px] break-words text-xl">Reparación de impresoras</h4>
+            <span class="hidden md:block pl-2 absolute md:text-[20px] opacity-80 font-light md:pt-16 lg:pt-24 break-words lg:w-[250px] w-[300px] text-[17px]">No importa la marca o el modelo, podemos reparar una amplia variedad de dispositivos.</span>
+            <span class="contact-btn md:hidden absolute mt-20 ml-10">Saber más <ArrowTopRight class="h-5 w-5 inline-block" /></span>
         </div>
-        <img src="/img/celulares.webp" class="z-[-1] rounded-[50px] w-[550px] md:w-[600px] mx-auto h-[274.613px]"/>
+        <img src="/img/impresoras.webp" class="w-[90%] lg:w-[600px] mx-auto"/>
     </div>
 </div>
 
@@ -38,7 +45,93 @@
 <style>
 
 img {
-    box-shadow: 0 2px 40px 0 rgba(7, 8, 12, 0.17);
+    box-shadow: 0 2px 10px 0 rgba(7, 8, 12, 0.15);
+    border-radius: 50px;
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (min-width: 1090px) {
+    img {
+        height: 274.613px;
+    }
+}
+
+h4 {
+    padding-top: 25px;
+}
+
+@media (max-width: 600px) {
+    img {
+        height: 130px;
+        border-radius: 20px;
+    }
+
+    h4 {
+    padding-top: 16px;
+    }
+
+    .contact-btn {
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-thickness: 0.05em;
+        text-underline-offset: 0.25em;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        font-size: 16px;
+        border-radius: 10px;
+        background-color: rgb(26, 71, 216);
+        border: 0.125rem solid rgb(26, 71, 216);
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.2s ease, border-color 0.2s ease,
+            color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+        cursor: pointer;
+        overflow: hidden;
+        will-change: transform;
+        padding: 8px 10px;
+    }
+
+    .contact-btn:hover {
+        background-color: white;
+        border-color: white;
+        transition: background-color 0.2s ease, border-color 0.2s ease,
+             color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+        transform: scale(1.07);
+        will-change: transform;
+        color: rgb(26, 71, 216);
+    }
+
+    .contact-btn:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-100%) rotate(10deg);
+        transform-origin: top left;
+        transition: background-color 0.2s ease, border-color 0.2s ease,
+            color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+        will-change: transform;
+        z-index: -1;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .contact-btn:hover:after {
+        transform: translate(0);
+    }
+    .contact-btn > * {
+        position: relative;
+        z-index: 1;
+    }
+    .contact-btn:hover {
+        color: rgb(26, 71, 216);
+    }
 }
 
 </style>
