@@ -1,8 +1,241 @@
 ---
+import ArrowTopRight from "@/icons/ArrowTopRight.astro";
+import Facebook from "@/icons/Facebook.astro";
+import Instagram from "@/icons/Instagram.astro";
+import Whatsapp from "@/icons/Whatsapp.astro";
+
 
 ---
 
-<h3 class="text-4xl text-main font-bold flex justify-center mt-16" id="contact-form">Contáctanos</h3>
-<div class="font-medium text-xl mt-4 text-center w-full mb-8 px-4">
-    <span>En <span class="font-semibold">Iquitos Tech</span>, estamos comprometidos a ofrecerte soluciones tecnológicas integrales que te ayuden a alcanzar tus objetivos de manera efectiva y eficiente <span class="text-blue-700 font-bold">¡Confía en nosotros!</span></span>
-</div>
+<footer class="frame-limit mt-12 mb-4">
+    <div class="blurred-circle"></div>
+    <section class="glass-bg w-full px-6 md:px-[72px] pt-10 md:pt-[72px] pb-[5px]">
+        <div class="content-flex md:gap-[48px] gap-6">
+            <div class="flex flex-col gap-[32px]">
+                <h3 class="text-2xl md:text-3xl font-bold md:text-start">¿Listo para solucionar tus problemas tecnológicos?</h3>
+                <span class="text-2xl md:text-3xl font-medium md:text-start">Hagamos que suceda 🙌🏻</span>
+            </div>
+            <div class="contact">
+                <a href="mailto:iquitostech@gmail.com" class="contact-btn hidden lg:block font-bold"><span class="Button__inner">Comencemos<ArrowTopRight class="h-4 w-4 inline-block"/></span></a>
+            </div>
+            <div class="separator" style="background-color: var(--token-1795d1d7-4691-42f6-b067-6d46fce27998, rgba(0, 0, 0, 0.1)); transform: none; transform-origin: 50% 50% 0px;"></div>
+            <div class="redes-links flex flex-col">
+                <div class="flex flex-col gap-4">
+                    <span class="text-[16px] md:text-[18px] opacity-70">Contacto</span>
+                    <div class="flex flex-col gap-2">
+                        <a href="mailto:iquitostech@gmail.com" class= "hover:underline text-lg md:text-xl font-medium">iquitostech@gmail.com<a/>
+                    </div>
+                </div>
+            </div>
+        <div/>
+    </section>
+</footer>
+
+<style>
+
+    .frame-limit {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        flex: none;
+        height: min-content;
+        justify-content: center;
+        border-radius: 40px;
+        border-radius: 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.4px);
+        -webkit-backdrop-filter: blur(6.4px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .blurred-circle {
+        aspect-ratio: 1 / 1;
+        background-color: rgba(0, 153, 255, 0.13);
+        border-radius: 8000px;
+        bottom: -600px;
+        filter: blur(100px);
+        flex: none;
+        height: 1072px;
+        left: 50%;
+        overflow: hidden;
+        position: absolute;
+        transform: translate(-50%);
+        width: 1072px;
+        will-change: var(--framer-will-change-override, transform);
+        z-index: -1;
+    }
+
+    .content-flex {
+        align-items: flex-start;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: min-content;
+        justify-content: flex-start;
+        overflow: visible;
+        position: relative;
+        width: 100%;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-btn {
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-thickness: 0.05em;
+        text-underline-offset: 0.25em;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: #444638;
+        font-size: 20px;
+        border-radius: 80em;
+        background-color: black;
+        border: 0.125rem solid black;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.2s ease, border-color 0.2s ease,
+            color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+        cursor: pointer;
+        overflow: hidden;
+        will-change: transform;
+        padding: 10px 20px;
+        display: inline-block;
+    }
+
+    .contact-btn:hover {
+        background-color: white;
+        border-color: white;
+        transition: background-color 0.2s ease, border-color 0.2s ease,
+            color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+        transform: scale(1.07);
+        will-change: transform;
+        color: black;
+    }
+
+    .contact-btn:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-100%) rotate(10deg);
+        transform-origin: top left;
+        transition: background-color 0.2s ease, border-color 0.2s ease,
+            color 0.2s ease, fill 0.2s ease, transform 0.2s ease-in-out;
+        will-change: transform;
+        z-index: -1;
+        border-radius: 80em;
+        background-color: white;
+    }
+
+    .contact-btn:hover:after {
+        transform: translate(0);
+        z-index: 0;
+    }
+    
+    .contact-btn > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .Button__inner {
+        color: white;
+    }
+    
+    .contact-btn:hover .Button__inner {
+        color: black;
+    }
+
+    .separator {
+        flex: none;
+        height: 1px;
+        overflow: visible;
+        position: relative;
+        width: 100%;
+    }
+
+    li {
+        border-radius:     0;
+        margin:    0; 
+        font-family:    inherit; 
+        font-size:    inherit; 
+        line-height:    inherit;
+        overflow:   visible;
+        text-transform:  none;
+        -webkit-appearance: button;
+    }
+
+    .btn-link {
+        display:  inline-block; 
+        font-weight:  bold; 
+        color:  black; 
+        -webkit-user-select:  none; 
+        -moz-user-select:  none; 
+        -ms-user-select:  none; 
+        user-select:  none; 
+        border:  0; 
+        border-radius:  4rem; 
+        transition:  all .2s ease-out;  
+        white-space: nowrap;  
+        margin-bottom: 1rem;  
+        box-shadow: 2px 1px 2px rgba(180,180,180,.7),inset 3px 2px 5px rgba(255,255,255,1);
+    }
+
+    li a:not(:disabled) { 
+        cursor: pointer;
+    } 
+
+    .btn-link:hover { 
+        color:  white; 
+        background-color: rgb(26, 71, 196); 
+        box-shadow: -2px -1px 2px rgba(180,180,180,.3),inset -3px -2px 3px rgb(26, 71, 196);
+    }
+
+    .btn-link:not(:disabled):not(.disabled) { 
+        cursor: pointer;
+    } 
+
+    .btn-link {
+        margin:  0px 2px 0 0; 
+        z-index:  1499;
+        left: 1rem; 
+    }
+
+    .btn-link:hover,.btn-link:active  { 
+        color: white; 
+        background-color: rgb(26, 71, 196); 
+        box-shadow: -2px -1px 2px rgba(180,180,180,.3),inset -3px -2px 3px rgb(26, 71, 196);
+    } 
+
+    @media (max-width: 500px) {
+        .contact-btn {
+            font-size: 16px;
+        }
+    } 
+
+    @media (min-width: 501px) {
+        .redes-links {
+            align-items: flex-start;
+            display: flex;
+            flex: none;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 64px;
+            height: min-content;
+            justify-content: flex-start;
+            overflow: visible;
+            position: relative;
+            width: 100%;
+        }
+    } 
+</style>
